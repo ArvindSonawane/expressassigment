@@ -12,8 +12,6 @@ app.get('/getUsers', function(req, res){
 })
 
 
-var server = app.listen(3006, function(){
-    var host = server.address().address
-    var port = server.address().port
-    console.log("REST API demo app listening at http://%s:%s", host, port)
-})
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`)
+});
